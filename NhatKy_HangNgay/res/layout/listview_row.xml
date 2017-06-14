@@ -24,18 +24,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
+        <ImageView
             android:id="@+id/btnsua"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sửa" />
+            android:layout_weight="0.56"
+            android:src="@drawable/ic_launcher_sua" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnxoa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xóa" />
-
+            android:layout_weight="0.82"
+            android:src="@drawable/ic_launcher_xoa" />
     </LinearLayout>
 
 </LinearLayout>

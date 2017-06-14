@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AdapterNhatKy extends BaseAdapter {
@@ -49,8 +49,8 @@ public class AdapterNhatKy extends BaseAdapter {
 		TextView txtid=(TextView) row.findViewById(R.id.txtid);
 		TextView txtngay=(TextView) row.findViewById(R.id.txtngay);		
 		TextView txtnoidung=(TextView) row.findViewById(R.id.txtnoidung);
-		Button btnsua = (Button) row.findViewById(R.id.btnsua);
-		Button btnxoa = (Button) row.findViewById(R.id.btnxoa);
+		ImageView btnsua = (ImageView) row.findViewById(R.id.btnsua);
+		ImageView btnxoa = (ImageView) row.findViewById(R.id.btnxoa);
 		
 		final NhatKy nk = list.get(position);
 		txtid.setText(nk.id + "");

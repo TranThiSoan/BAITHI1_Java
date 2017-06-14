@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class AddActivity  extends Activity{
 
 	final String DATABASE_NAME = "mylist.db.sqlite";
-	Button btnluu, btnhuy;
+	ImageView btnluu, btnhuy;
 	EditText editngay, editnoidung;
 	protected void onCreate(Bundle saveInstanceState) {
 		super.onCreate(saveInstanceState);
@@ -22,8 +22,8 @@ public class AddActivity  extends Activity{
 		addEvents();
 	}
 	private void addControl() {
-		btnluu = (Button) findViewById(R.id.btnluu);
-		btnhuy = (Button) findViewById(R.id.btnhuy);
+		btnluu = (ImageView) findViewById(R.id.btnluu);
+		btnhuy = (ImageView) findViewById(R.id.btnhuy);
 		editngay = (EditText) findViewById(R.id.editngay);
 		editnoidung = (EditText) findViewById(R.id.editnoidung);
 	}

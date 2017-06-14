@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 	ListView listView;
 	ArrayList <NhatKy> list;
 	AdapterNhatKy adapter;
-	Button btnadd;
+	ImageView btnadd;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
     }
     
     private void addControls(){
-    	btnadd = (Button)findViewById(R.id.btnadd);
+    	btnadd = (ImageView)findViewById(R.id.btnadd);
     	btnadd.setOnClickListener(new View.OnClickListener() {
 
 			@Override

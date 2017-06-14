@@ -8,14 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class UpdateActivity extends Activity {
 
 	final String DATABASE_NAME = "mylist.db.sqlite";
     int id = -1;
-	Button btnluu, btnhuy;
+    ImageView btnluu, btnhuy;
 	EditText editngay, editnoidung;
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,8 @@ public class UpdateActivity extends Activity {
     }
 	
 	private void addControl() {
-		btnluu = (Button) findViewById(R.id.btnluu);
-		btnhuy = (Button) findViewById(R.id.btnhuy);
+		btnluu = (ImageView) findViewById(R.id.btnluu);
+		btnhuy = (ImageView) findViewById(R.id.btnhuy);
 		editngay = (EditText) findViewById(R.id.editngay);
 		editnoidung = (EditText) findViewById(R.id.editnoidung);
 	}
@@ -71,8 +71,8 @@ public class UpdateActivity extends Activity {
 		contentValues.put("NGAY",ngay);
 		contentValues.put("NOIDUNG", noidung);
 		
-		SQLiteDatabase database = Database.initDatabase(this, "mylist.db.mysqlite");
-		database.update("mylist_data",contentValues,"id = ? ",new String[]{id + ""});
+		SQLiteDatabase database = Database.initDatabase(this, "mylist.db.sqlite");
+		database.update("mylist_data",contentValues,"id = ?, ngay = ?, noidung = ? ",new String[]{id + "",ngay,noidung});
 		Intent intent =  new Intent(this, MainActivity.class);
 		startActivity(intent);
 		
